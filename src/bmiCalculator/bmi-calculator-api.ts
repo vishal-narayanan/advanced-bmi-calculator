@@ -7,6 +7,9 @@ const bmiCalculatorApi = express.Router();
 bmiCalculatorApi.post('/calculateBmi', async (request: Request, response: Response, next: NextFunction) => {
   const bmiData: Array<BMIInterface> = request.body.data;
   let totalNoofOverWeight = 0;
+  if(!bmiData || bmiData.length === 0){
+    response.status(HttpStatus.NOT_FOUND).send({status:false});
+  }
   try {
     const data = bmiData.map(bmi => {
       if (bmi.HeightCm <= 0 || bmi.WeightKg <= 0) {

@@ -1,15 +1,18 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "baseUrl": "./src",
     "noImplicitReturns": false,
     "noUnusedLocals": false,
-    "outDir": "lib",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "sourceMap": true,
     "target": "es2017",
     "noImplicitAny": false,
     "noUnusedParameters": false,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "moduleResolution": "node"
   },
   "compileOnSave": true,
-  "include": ["src"]
+  "include": ["src", "src/test"]
 }
