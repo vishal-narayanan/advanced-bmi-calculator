@@ -1,4 +1,4 @@
-# [code-08062021-VishalNarayanan Challenge]
+# Advanced BMI Calculator
 
 API calculates BMI (Body Mass Index) of given list of weight in
 kg and height in centimeters and total no of over weight persons
